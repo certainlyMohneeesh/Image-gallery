@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="tabs">
+            <button class="tab" onclick="showEvent('event1')">Camping</button>
+            <button class="tab" onclick="showEvent('event2')">Mumbai</button>
+            <button class="tab" onclick="showEvent('event3')">Waterfall Trek</button>
+        </div>
+        <div class="thumbnails" id="event1">
+            <div class="image-wrapper">
+                <img src="./images/Camping/Camping1.jpg" alt="Image 1" data-description="Description of Image 1" onclick="openLightbox(); currentSlide(1)">
+                <div class="description">Description of Image 1</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Camping/Camping2.jpg" alt="Image 2" data-description="Description of Image 2" onclick="openLightbox(); currentSlide(2)">
+                <div class="description">Description of Image 2</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Camping/Camping3.jpg" alt="Image 3" data-description="Description of Image 3" onclick="openLightbox(); currentSlide(3)">
+                <div class="description">Description of Image 3</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Camping/Camping4.jpg" alt="Image 4" data-description="Description of Image 4" onclick="openLightbox(); currentSlide(4)">
+                <div class="description">Description of Image 4</div>
+            </div>
+        </div>
+        <div class="thumbnails" id="event2" style="display:none;">
+            <div class="image-wrapper">
+                <img src="./images/Mumbai/Mumbai1original.jpg" alt="Image 5" data-description="Description of Image 5" onclick="openLightbox(); currentSlide(5)">
+                <div class="description">Description of Image 5</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Mumbai/Mumbai4.jpg" alt="Image 6" data-description="Description of Image 6" onclick="openLightbox(); currentSlide(6)">
+                <div class="description">Description of Image 6</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Mumbai/Mumbai6.jpg" alt="Image 7" data-description="Description of Image 7" onclick="openLightbox(); currentSlide(7)">
+                <div class="description">Description of Image 7</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Mumbai/Mumbai7.jpg" alt="Image 8" data-description="Description of Image 8" onclick="openLightbox(); currentSlide(8)">
+                <div class="description">Description of Image 8</div>
+            </div>
+        </div>
+        <div class="thumbnails" id="event3" style="display:none;">
+            <div class="image-wrapper">
+                <img src="./images/Waterfall Trek/Waterfall Trek1.jpg" alt="Image 9" data-description="Description of Image 9" onclick="openLightbox(); currentSlide(9)">
+                <div class="description">Description of Image 9</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Waterfall Trek/Waterfall Trek2.jpg" alt="Image 10" data-description="Description of Image 10" onclick="openLightbox(); currentSlide(10)">
+                <div class="description">Description of Image 10</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Waterfall Trek/Waterfall Trek3.jpg" alt="Image 11" data-description="Description of Image 11" onclick="openLightbox(); currentSlide(11)">
+                <div class="description">Description of Image 11</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/Waterfall Trek/Waterfall Trek4.jpg" alt="Image 12" data-description="Description of Image 12" onclick="openLightbox(); currentSlide(12)">
+                <div class="description">Description of Image 12</div>
+            </div>
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <div class="lightbox-slide">
+                <img src="./images/Camping/Camping1.jpg" alt="Image 1" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Camping/Camping2.jpg" alt="Image 2" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Camping/Camping3.jpg" alt="Image 3" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Camping/Camping4.jpg" alt="Image 4" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Mumbai/Mumbai1original.jpg" alt="Image 5" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Mumbai/Mumbai4.jpg" alt="Image 6" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Mumbai/Mumbai6.jpg" alt="Image 7" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Mumbai/Mumbai7.jpg" alt="Image 8" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Waterfall Trek/Waterfall Trek1.jpg" alt="Image 9" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Waterfall Trek/Waterfall Trek2.jpg" alt="Image 10" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Waterfall Trek/Waterfall Trek3.jpg" alt="Image 11" class="lightbox-img">
+            </div>
+            <div class="lightbox-slide">
+                <img src="./images/Waterfall Trek/Waterfall Trek4.jpg" alt="Image 12" class="lightbox-img">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <span class="close" onclick="closeLightbox()">&times;</span>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
